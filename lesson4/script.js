@@ -188,6 +188,30 @@ upd: Обновите программу так, чтобы она работа�
 Если number = -98463 // returns -36489
 */
 
+const number = '123456';
+for (let i = number.length - 1; i >= 0; i--) {
+  console.log(number[i]);
+}
+
+const number = '123456';
+for (let i = number.length - 1; i >= 1; i--) {
+  console.log(number[i]);
+}
+
+
+let first = 1;
+let second = 1;
+let third = 1;
+for (let i = 0; i <= 10; i++) {
+   third = first + second;
+   first = second;
+   second = third;
+   console.log(third);
+}
+
+for (let i = 0, first = 1, second = 1, third = 1; i <= 10; i++, third = first + second,  first = second, second = third, console.log(third)) {
+}
+
 /*
 10) Напишите программу, которая спрашивает у пользователя число
 и выводит на экран ряд Фибоначи, который содержит в себе столько чисел,
