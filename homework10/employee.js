@@ -23,7 +23,7 @@ const empolyee = [
     surname: 'Lam',
     salary: 480,
     workExperience: 3,
-    isPrivileges: true,
+    isPrivileges: true,=
     gender: 'female',
   },
   {
@@ -99,3 +99,4 @@ const empolyee = [
     gender: 'male',
   },
 ];
+
