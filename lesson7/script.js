@@ -177,8 +177,15 @@ const newArr = arr.push(5);
 const arr = [1,2,3];
 delete arr[1]; // НЕ ПОЛЬЗОВАТЬ
 
-
+// acc - второму параметру или первому элементу массива, если второй аргумент не задан
 arr.reduce(function(acc, item) {
   console.log(acc);
   return acc;
 });
+
+
+function removeNegativeElements(arr) {
+  return arr.filter(function(item) {
+    return !(typeof item === 'number' && item < 0);
+  })
+}
