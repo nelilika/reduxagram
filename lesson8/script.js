@@ -93,7 +93,7 @@ function getFullName(name) {
 };
 
 const newFuncWithRina = getFullName.bind({ name: 'Rina' });
-console.log(newFuncWithRina());
+console.log(newFuncWithRina()); // Rina 
 
 const newFuncWithAlina =  newFuncWithRina.bind({ name: 'Alina' });
 console.log(newFuncWithAlina());
