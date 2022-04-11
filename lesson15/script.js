@@ -53,9 +53,14 @@ obj1.__proto__ === obj2.__proto__; // true !! оба объекта ссылаю
 // { constructor: f() {} }
 
 function Student(name, age, marks) {
+  const account = 0;
   this.name = name;
   this.age = age;
   this.marks = marks;
+
+  this.getAccount = function() {
+    return account;
+  }
 }
 
 Student.prototype.getAverageMark = function() {
