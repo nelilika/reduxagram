@@ -19,9 +19,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jp?eg|gif|svg|avig)$/i,
+        test: /\.(png|jpe?g|gif|svg)$/,
         use: [{
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
             outputPath: 'images',
           },
@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(woff|woff2|ttf|otf|eot)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
           }
         ]
       },
