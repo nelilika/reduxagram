@@ -288,7 +288,7 @@ const condidateArr = [
     company: "GOKO",
     email: "kenyamorse@goko.com",
     phone: "+1 (823) 466-2784",
-    address: "837 Linwood Street, Guthrie, Northern Mariana Islands, 494",
+    address: "837 Linwood Street, Guthrie, Nevada, 494",
     about:
       "Nostrud duis adipisicing fugiat pariatur aliquip cillum non quis consectetur. Id nulla pariatur ullamco id culpa aliquip anim id deserunt enim aliquip laboris enim. Culpa ad aliqua in fugiat minim Lorem quis. Nulla veniam ex incididunt laboris ex. Cupidatat irure anim ad occaecat duis esse eu dolore veniam in proident labore consectetur. Reprehenderit duis incididunt adipisicing anim ullamco sit ut do exercitation sint.\r\n",
     registered: "2017-10-08T11:36:03",
@@ -710,7 +710,7 @@ const condidateArr = [
     company: "OVATION",
     email: "jeaninematthews@ovation.com",
     phone: "+1 (886) 568-3315",
-    address: "769 Rockaway Avenue, Oneida, Rhode Island, 2382",
+    address: "769 Rockaway Avenue, Oneida, Minnesota, 2382",
     about:
       "Id duis commodo est consectetur ad fugiat tempor laborum excepteur. Dolor irure eiusmod voluptate esse. Ea sint cillum deserunt cillum id sit mollit. Sint non dolore exercitation consectetur deserunt eu fugiat non anim officia qui Lorem ipsum tempor. Enim quis qui est irure amet. Nisi Lorem ipsum fugiat ullamco.\r\n",
     registered: "2016-11-27T08:32:43",
@@ -840,7 +840,7 @@ const condidateArr = [
     company: "FILODYNE",
     email: "karinsteele@filodyne.com",
     phone: "+1 (956) 406-2393",
-    address: "255 Williams Court, Hickory, Virgin Islands, 3367",
+    address: "255 Williams Court, Hickory, Florida, 3367",
     about:
       "Aute reprehenderit dolore adipisicing consequat veniam nostrud proident velit culpa tempor eu sit sit occaecat. Exercitation qui consequat officia ullamco. Ex elit aliqua labore magna occaecat incididunt est ad mollit esse. Aliquip sint Lorem irure do incididunt ea dolore minim eu esse magna aute laborum.\r\n",
     registered: "2016-10-03T09:39:55",
@@ -1035,7 +1035,7 @@ const condidateArr = [
     company: "MAGNEMO",
     email: "poolestafford@magnemo.com",
     phone: "+1 (927) 429-3746",
-    address: "752 Macon Street, Charco, Tennessee, 2876",
+    address: "752 Macon Street, Charco, Kansas, 2876",
     about:
       "Excepteur ut aliquip consequat culpa eiusmod minim fugiat amet velit excepteur. Cupidatat mollit aliquip esse officia eiusmod nisi culpa proident do eiusmod consequat laborum reprehenderit. Minim quis do magna amet. Quis nisi fugiat aliquip exercitation. Excepteur commodo duis consequat duis officia aliqua quis commodo labore aute. In ex id sint elit fugiat labore ad.\r\n",
     registered: "2017-04-08T05:13:17",
@@ -1173,7 +1173,7 @@ const condidateArr = [
     company: "ORBOID",
     email: "sampsondelgado@orboid.com",
     phone: "+1 (898) 592-3312",
-    address: "956 Farragut Place, Rosine, Alabama, 5509",
+    address: "956 Farragut Place, Rosine, Ohio, 5509",
     about:
       "Id eiusmod voluptate laborum proident eu et cupidatat duis laboris ullamco. Laboris sint deserunt exercitation aliqua nisi nulla sint ad non laboris. Consequat laboris consectetur ut cillum nulla ullamco laboris. Sit culpa Lorem cillum dolore. Mollit in qui mollit mollit do veniam. Mollit officia occaecat est nulla sit id cupidatat voluptate. Occaecat et ea amet velit adipisicing irure.\r\n",
     registered: "2016-02-24T02:35:22",
@@ -1376,7 +1376,7 @@ const condidateArr = [
     company: "VALREDA",
     email: "kellerreeves@valreda.com",
     phone: "+1 (827) 496-2656",
-    address: "843 Danforth Street, Haena, Palau, 6879",
+    address: "843 Danforth Street, Haena, Kansas, 6879",
     about:
       "Nulla laborum fugiat consectetur sit incididunt pariatur id enim amet magna in consectetur. Consequat in velit cupidatat officia id aute aliquip deserunt ullamco mollit ex. Veniam quis reprehenderit non consequat enim sint. Magna do duis esse voluptate ad incididunt. Cupidatat qui laboris sint eu.\r\n",
     registered: "2017-08-13T09:50:42",
@@ -2034,7 +2034,7 @@ const condidateArr = [
     company: "COLUMELLA",
     email: "louellaforbes@columella.com",
     phone: "+1 (824) 513-3432",
-    address: "740 Croton Loop, Lookingglass, Idaho, 3138",
+    address: "740 Croton Loop, Lookingglass, Florida, 3138",
     about:
       "Eiusmod velit eu aliqua sint anim anim nostrud velit excepteur. Ea nulla ad aute ex voluptate anim cupidatat labore anim voluptate sit anim. Minim esse aliquip id aute consequat ea non. Eiusmod reprehenderit adipisicing anim commodo ut cillum nisi elit magna cillum. Reprehenderit ex et adipisicing consectetur non sunt ut nulla ipsum minim. Proident cillum ut enim labore ad officia do cillum id consequat sunt adipisicing.\r\n",
     registered: "2018-01-26T05:48:08",
@@ -2310,7 +2310,7 @@ const condidateArr = [
     company: "GENMOM",
     email: "roslyncase@genmom.com",
     phone: "+1 (904) 560-3425",
-    address: "918 Orient Avenue, Ferney, Federated States Of Micronesia, 638",
+    address: "918 Orient Avenue, Ferney, Hawaii, 638",
     about:
       "Pariatur ad amet anim sunt nisi ipsum ea et commodo occaecat do occaecat. Excepteur mollit minim incididunt dolore occaecat aliqua. Commodo laboris ex officia anim magna.\r\n",
     registered: "2018-09-15T02:11:14",
@@ -2440,7 +2440,7 @@ const condidateArr = [
     company: "MAINELAND",
     email: "lizawells@maineland.com",
     phone: "+1 (895) 436-2662",
-    address: "671 Livonia Avenue, Tioga, South Dakota, 3834",
+    address: "671 Livonia Avenue, Tioga, North Carolina, 3834",
     about:
       "Ipsum id consequat nisi commodo. Dolore cupidatat aute adipisicing incididunt. Officia commodo laborum aliqua eu aliqua magna.\r\n",
     registered: "2018-06-18T01:58:35",
@@ -2578,7 +2578,7 @@ const condidateArr = [
     company: "COMVEX",
     email: "brennanramos@comvex.com",
     phone: "+1 (959) 477-3259",
-    address: "428 Orange Street, Greenfields, District Of Columbia, 8735",
+    address: "428 Orange Street, Greenfields, Florida, 8735",
     about:
       "Amet cillum ea pariatur deserunt velit quis adipisicing. Consequat labore Lorem esse magna. Eu dolore amet voluptate irure duis. Ea minim sunt et incididunt consequat laborum. Enim proident cupidatat cillum elit est eu dolore reprehenderit ea esse. Fugiat ex voluptate ut adipisicing voluptate adipisicing enim. Lorem elit dolor ipsum ea officia laboris non adipisicing anim.\r\n",
     registered: "2018-04-13T07:53:29",
@@ -2643,7 +2643,7 @@ const condidateArr = [
     company: "ORBALIX",
     email: "shellyjones@orbalix.com",
     phone: "+1 (850) 576-3355",
-    address: "409 Dennett Place, Dupuyer, Connecticut, 4233",
+    address: "409 Dennett Place, Dupuyer, Kansas, 4233",
     about:
       "Eiusmod aliquip nisi eu et labore. Sint deserunt Lorem cillum eu. Dolor et nisi cupidatat est consequat consequat sunt cillum. Minim sit occaecat fugiat amet. Ipsum consequat officia nostrud exercitation. Do id commodo reprehenderit cupidatat esse irure est magna eu cupidatat nulla velit.\r\n",
     registered: "2017-06-11T10:43:49",
@@ -2846,7 +2846,7 @@ const condidateArr = [
     company: "MEDESIGN",
     email: "salashooper@medesign.com",
     phone: "+1 (816) 596-3843",
-    address: "448 Berriman Street, Fivepointville, Guam, 9077",
+    address: "448 Berriman Street, Fivepointville, Texas, 9077",
     about:
       "Occaecat est culpa voluptate veniam nisi irure reprehenderit. Occaecat nisi et aute cillum sit tempor ipsum officia laboris aute in cupidatat. Magna qui Lorem nulla irure do fugiat. Duis proident deserunt cillum dolore ad nisi in.\r\n",
     registered: "2018-02-05T09:06:06",
@@ -2911,7 +2911,7 @@ const condidateArr = [
     company: "METROZ",
     email: "holderburton@metroz.com",
     phone: "+1 (891) 507-2530",
-    address: "802 Emmons Avenue, Caroline, American Samoa, 8051",
+    address: "802 Emmons Avenue, Caroline, Hawaii, 8051",
     about:
       "Nisi id anim ad reprehenderit esse pariatur quis fugiat occaecat do qui dolor. Do culpa mollit aliquip irure et aute deserunt id. Amet exercitation laborum consectetur dolore.\r\n",
     registered: "2014-09-21T04:31:25",
@@ -2976,7 +2976,7 @@ const condidateArr = [
     company: "PROFLEX",
     email: "ewingspears@proflex.com",
     phone: "+1 (811) 571-2966",
-    address: "143 Sumner Place, Defiance, Wyoming, 9386",
+    address: "143 Sumner Place, Defiance, Utah, 9386",
     about:
       "Do cillum sit duis ea sunt qui. Ex enim laboris adipisicing elit aliqua nulla. In veniam ullamco eu esse est magna fugiat. Et dolor et excepteur deserunt sunt irure deserunt aliquip ullamco. Nulla ut elit sunt et sit ad cupidatat aliqua ut proident amet ad esse cupidatat. Nisi labore voluptate in excepteur adipisicing consectetur ullamco nostrud esse commodo aliquip nostrud.\r\n",
     registered: "2019-02-06T12:40:08",
@@ -3114,7 +3114,7 @@ const condidateArr = [
     company: "MICRONAUT",
     email: "aureliascott@micronaut.com",
     phone: "+1 (865) 457-3887",
-    address: "949 Vernon Avenue, Manchester, Maine, 9844",
+    address: "949 Vernon Avenue, Manchester, Kentucky, 9844",
     about:
       "Consectetur excepteur nisi ullamco in et duis. Reprehenderit enim ea velit in ea non mollit. Amet qui qui magna veniam ut do incididunt cupidatat minim ex nulla commodo do voluptate. Enim incididunt veniam eiusmod elit et proident dolor dolore. Dolore in ad nostrud consequat do deserunt.\r\n",
     registered: "2014-07-14T04:50:44",
@@ -3187,7 +3187,7 @@ const condidateArr = [
     company: "TROPOLI",
     email: "martinezhopkins@tropoli.com",
     phone: "+1 (850) 504-2808",
-    address: "642 Commerce Street, Westerville, West Virginia, 9536",
+    address: "642 Commerce Street, Westerville, Iowa, 9536",
     about:
       "Aute pariatur sit in voluptate consectetur occaecat enim et. Deserunt qui pariatur nulla quis sit amet nisi veniam Lorem velit tempor irure excepteur deserunt. Laboris aliqua enim et eu est aute exercitation pariatur aliqua sit. Reprehenderit esse duis ad laborum dolore enim et quis dolore anim.\r\n",
     registered: "2016-08-10T01:24:42",
@@ -3333,7 +3333,7 @@ const condidateArr = [
     company: "DANJA",
     email: "burrisjoyner@danja.com",
     phone: "+1 (917) 564-3002",
-    address: "689 Vine Street, Barstow, Vermont, 1830",
+    address: "689 Vine Street, Barstow, New York, 1830",
     about:
       "Id sint consequat ex enim cillum est est deserunt est culpa aliqua deserunt anim. Id ea et Lorem velit ea consequat do incididunt proident aute. Cillum eu est occaecat qui veniam ipsum pariatur anim nisi.\r\n",
     registered: "2015-06-13T06:22:55",
@@ -3406,7 +3406,7 @@ const condidateArr = [
     company: "DYMI",
     email: "ortizmorin@dymi.com",
     phone: "+1 (832) 498-2797",
-    address: "674 Cortelyou Road, Glenville, Maryland, 2209",
+    address: "674 Cortelyou Road, Glenville, Florida, 2209",
     about:
       "Deserunt labore duis tempor sint aute irure anim quis Lorem ea mollit eiusmod velit velit. Id anim ullamco ea duis in officia do proident adipisicing consectetur Lorem exercitation. Anim magna quis ex id magna sunt mollit ullamco irure ut do sit. Sit est laboris reprehenderit minim esse officia reprehenderit dolor nulla voluptate incididunt laborum sit. Cupidatat nulla ullamco excepteur pariatur aliquip sit enim nostrud.\r\n",
     registered: "2019-03-15T04:24:08",
@@ -3609,7 +3609,7 @@ const condidateArr = [
     company: "INRT",
     email: "wildersalas@inrt.com",
     phone: "+1 (825) 465-3896",
-    address: "442 Seba Avenue, Beaulieu, Marshall Islands, 8270",
+    address: "442 Seba Avenue, Beaulieu, Hawaii, 8270",
     about:
       "Anim amet officia deserunt elit non reprehenderit sint Lorem ex. Id mollit enim sunt proident sint eiusmod excepteur proident exercitation sit ut irure. Dolor cillum veniam sit culpa ullamco est qui minim irure eu aliqua cillum in veniam. Commodo mollit consequat labore irure duis qui duis.\r\n",
     registered: "2019-06-13T07:20:02",
@@ -3755,7 +3755,7 @@ const condidateArr = [
     company: "QUOTEZART",
     email: "connielynn@quotezart.com",
     phone: "+1 (832) 488-3870",
-    address: "426 Bush Street, Robinette, New Hampshire, 4000",
+    address: "426 Bush Street, Robinette, Texas, 4000",
     about:
       "Eiusmod incididunt eiusmod consectetur sit sint fugiat elit. Commodo consequat minim velit nulla commodo ipsum incididunt minim eiusmod minim. Exercitation cupidatat elit deserunt exercitation non do laboris sit voluptate ea aute irure.\r\n",
     registered: "2017-05-06T07:19:49",
@@ -3885,7 +3885,7 @@ const condidateArr = [
     company: "INDEXIA",
     email: "lenacarrillo@indexia.com",
     phone: "+1 (994) 492-2665",
-    address: "225 Jodie Court, Garfield, Puerto Rico, 7037",
+    address: "225 Jodie Court, Garfield, Utah, 7037",
     about:
       "Quis ad est nulla sint anim in. Dolore incididunt amet enim irure incididunt laboris. Consectetur enim eiusmod officia veniam Lorem nostrud qui laboris ipsum excepteur minim non excepteur voluptate. Do aliqua ea enim culpa ullamco elit laborum anim aliquip sit quis ipsum do.\r\n",
     registered: "2015-02-22T02:07:00",
@@ -4153,7 +4153,7 @@ const condidateArr = [
     company: "RODEOLOGY",
     email: "bessieflynn@rodeology.com",
     phone: "+1 (857) 562-3342",
-    address: "642 Madeline Court, Stouchsburg, South Carolina, 1999",
+    address: "642 Madeline Court, Stouchsburg, North Carolina, 1999",
     about:
       "Ad adipisicing ut aliquip anim enim. Qui enim laborum reprehenderit ullamco. Dolore consectetur quis adipisicing in culpa exercitation non aliqua cillum. Adipisicing voluptate enim ad exercitation aute. Ex pariatur esse enim ea.\r\n",
     registered: "2016-09-09T06:30:24",
@@ -4218,7 +4218,7 @@ const condidateArr = [
     company: "CENTICE",
     email: "hartdowns@centice.com",
     phone: "+1 (853) 585-2347",
-    address: "490 Channel Avenue, Neibert, Northern Mariana Islands, 8401",
+    address: "490 Channel Avenue, Neibert, Kentucky, 8401",
     about:
       "Irure elit ut Lorem occaecat in mollit qui laborum nisi. Anim Lorem et excepteur et consequat duis ad deserunt. Veniam qui nulla eu Lorem. Laboris exercitation nisi tempor reprehenderit aliqua. Non labore consectetur voluptate velit. Non laboris deserunt ex ipsum sint enim minim. Dolor tempor laborum ea quis aliqua amet.\r\n",
     registered: "2019-01-29T08:32:11",
