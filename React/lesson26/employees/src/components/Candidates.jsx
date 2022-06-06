@@ -1,33 +1,15 @@
 import './Candidates.css';
-import { useState } from 'react';
-import candidatesArr from '../data/candidates';
+import { useContext } from 'react';
 import Candidate from './Candidate';
+import MainContext from '../context/context';
 
 function Candidates() {
-  const [candidates, setCandidates] = useState(candidatesArr);
-
-  const removeCandidate = function (guid) {
-    const newCandidates = candidates.filter(
-      (candidate) => candidate.guid !== guid
-    );
-    setCandidates(newCandidates);
-  };
-
-  const editCandidate = function (editedCandidate) {
-    const editedCandidates = candidates.map((candidate) =>
-      candidate.guid !== editedCandidate.guid ? candidate : editedCandidate
-    );
-    setCandidates(editedCandidates);
-  };
+  const { filteredCandidate } = useContext(MainContext);
 
   return (
     <div className="container">
-      {candidates.map((candidate) => (
-        <Candidate
-          key={candidate.guid}
-          candidate={candidate}
-          removeCandidate={removeCandidate}
-        />
+      {filteredCandidate.map((candidate) => (
+        <Candidate key={candidate.guid} candidate={candidate} />
       ))}
     </div>
   );

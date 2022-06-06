@@ -5,3 +5,5 @@
 - useContext();
 - useRef();
 - Component Life-Cicle;
+- axios;
+- custom ui components;

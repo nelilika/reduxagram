@@ -1,6 +1,9 @@
+import { useContext } from 'react';
 import './Candidate.css';
+import MainContext from '../context/context';
 
-function Candidate({ candidate, removeCandidate }) {
+function Candidate({ candidate }) {
+  const { removeCandidate } = useContext(MainContext);
   return (
     <div className="item">
       <button className="close" onClick={() => removeCandidate(candidate.guid)}>
@@ -30,9 +33,8 @@ function Candidate({ candidate, removeCandidate }) {
         </span>
       </p>
       <ul>
-        {candidate.tags.map((tag, i) => (
-          <li key={i}>{tag}</li>
-        ))}
+        {candidate.tags &&
+          candidate.tags.map((tag, i) => <li key={i}>{tag}</li>)}
       </ul>
     </div>
   );

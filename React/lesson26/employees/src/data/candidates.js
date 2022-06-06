@@ -4418,4 +4418,8 @@ const condidateArr = [
   },
 ];
 
-export default condidateArr;
+// export default condidateArr;
+
+module.exports = () => {
+  return { candidates: condidateArr };
+};
