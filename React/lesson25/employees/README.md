@@ -2,7 +2,7 @@
 
 - Create-react-app
 - Launch our first project
-- useState
+- useState()
 - props
 - loop components
 - components condition
