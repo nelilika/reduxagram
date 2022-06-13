@@ -1,3 +1,5 @@
+const { faker } = require('@faker-js/faker');
+
 const condidateArr = [
   {
     index: 0,
@@ -4421,5 +4423,10 @@ const condidateArr = [
 // export default condidateArr;
 
 module.exports = () => {
-  return { candidates: condidateArr };
+  return {
+    candidates: condidateArr.map((cand) => ({
+      ...cand,
+      picture: faker.image.cats(),
+    })),
+  };
 };

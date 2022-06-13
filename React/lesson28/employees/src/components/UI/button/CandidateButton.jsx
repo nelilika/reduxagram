@@ -1,10 +1,11 @@
 import classes from './CandidateButton.module.css';
+import Button from '@mui/material/Button';
 
 const CandidateButton = ({ children, ...props }) => {
   return (
-    <button {...props} className={classes.CandidateButton}>
+    <Button variant="contained" {...props} className={classes.CandidateButton}>
       {children}
-    </button>
+    </Button>
   );
 };
 

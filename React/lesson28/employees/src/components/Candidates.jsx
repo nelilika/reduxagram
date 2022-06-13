@@ -1,17 +1,19 @@
 import './Candidates.css';
-import { useContext } from 'react';
 import Candidate from './Candidate';
-import MainContext from '../context/context';
+import { useEmployeeContext } from '../context/context';
+import Grid from '@mui/material/Grid';
 
 function Candidates() {
-  const { filteredCandidate } = useContext(MainContext);
+  const [{ filteredCandidate }] = useEmployeeContext();
 
   return (
-    <div className="container">
+    <Grid container spacing={12}>
       {filteredCandidate.map((candidate) => (
-        <Candidate key={candidate.guid} candidate={candidate} />
+        <Grid item xs={12} md={4} lg={3} key={candidate.guid}>
+          <Candidate candidate={candidate} />
+        </Grid>
       ))}
-    </div>
+    </Grid>
   );
 }
 

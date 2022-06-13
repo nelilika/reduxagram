@@ -1,15 +1,18 @@
 import './App.css';
-import { useState, useContext } from 'react';
-import MainContext from '../context/context';
+import { useState } from 'react';
+import { useEmployeeContext } from '../context/context';
 import CandidateInput from './UI/input/CandidateInput';
 import CandidateButton from './UI/button/CandidateButton';
+import { v4 as uuidv4 } from 'uuid';
+import { addEmployee } from '../reducer/employeeReducer';
+import { faker } from '@faker-js/faker';
 
 function NewCandidate() {
   const [candidate, setCandidate] = useState({
     name: '',
     company: '',
   });
-  const { addNewCandidate } = useContext(MainContext);
+  const [, dispatch] = useEmployeeContext();
 
   const changeCandidate = function (event) {
     setCandidate({
@@ -22,7 +25,15 @@ function NewCandidate() {
     if (Object.values(candidate).some((value) => !value)) {
       return;
     }
-    addNewCandidate(candidate);
+
+    const newCandidate = {
+      ...candidate,
+      guid: uuidv4(),
+      picture: faker.image.cats(),
+    };
+
+    dispatch(addEmployee(newCandidate));
+
     setCandidate({
       name: '',
       company: '',

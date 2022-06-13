@@ -1,7 +1,18 @@
-import classes from './CandidateInput.module.css';
+import TextField from '@mui/material/TextField';
 
 const CandidateInput = (props) => {
-  return <input {...props} className={classes.CandidateInput} type="text" />;
+  return (
+    <TextField
+      id="outlined-basic"
+      label="Outlined"
+      variant="outlined"
+      {...props}
+      sx={{
+        m: '10px',
+      }}
+      type="text"
+    />
+  );
 };
 
 export default CandidateInput;
