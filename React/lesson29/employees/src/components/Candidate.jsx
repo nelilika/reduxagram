@@ -13,12 +13,12 @@ export default function Candidate({ candidate }) {
 
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
+      {/* <CardMedia
         component="img"
         alt="green iguana"
         height="140"
         image={candidate.picture}
-      />
+      /> */}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {candidate.name}

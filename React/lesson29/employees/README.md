@@ -1,9 +1,6 @@
-# Lesson 26
+# Lesson 29
 
-- useEffect();
-- useMemo();
-- useContext();
-- useRef();
-- Component Life-Cicle;
-- axios;
-- custom ui components;
+- модальное окно
+- анимация
+- работа с формами
+- кастомную тему
