@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import NavTabs from '../UI/NavBar';
 
 const InputFile = () => {
   const [image, setImage] = useState({
@@ -14,6 +15,7 @@ const InputFile = () => {
   const uploadImage = (event) => {
     const reader = new FileReader();
     const file = event.target.files[0];
+    console.log(file);
     reader.onloadend = () => {
       console.log(reader);
       setImage({
@@ -32,30 +34,32 @@ const InputFile = () => {
   const chooseFile = () => fileInputRef.current.click();
 
   return (
-    <form noValidate>
-      <Box>
-        <Button fullWidth onClick={chooseFile}>
-          Choose File
-        </Button>
+    <>
+      <form noValidate>
+        <Box>
+          <Button fullWidth onClick={chooseFile}>
+            Choose File
+          </Button>
 
-        <label>
-          <TextField
-            sx={{ display: 'none' }}
-            {...register('image')}
-            onChange={uploadImage}
-            type="file"
-            ref={fileInputRef}
+          <label>
+            <TextField
+              sx={{ display: 'none' }}
+              {...register('image')}
+              onChange={uploadImage}
+              type="file"
+              ref={fileInputRef}
+            />
+          </label>
+
+          <Typography align="center">{image.name}</Typography>
+          <img
+            style={{ maxWidth: 400, margin: '0 auto', display: 'block' }}
+            src={image.src}
+            alt={image.name}
           />
-        </label>
-
-        <Typography align="center">{image.name}</Typography>
-        <img
-          style={{ maxWidth: 400, margin: '0 auto', display: 'block' }}
-          src={image.src}
-          alt={image.name}
-        />
-      </Box>
-    </form>
+        </Box>
+      </form>
+    </>
   );
 };
 

@@ -1,16 +1,21 @@
 import Typography from '@mui/material/Typography';
 import PostGrid from './components/Posts/PostGrid';
+import NavTabs from './components/UI/NavBar';
 import './styles/styles.scss';
 
 function App() {
   return (
     <div>
-      <Typography variant="h1" component="h2" sx={{
-        textAlign: 'center',
-        fontFamily: 'Festive',
-        color: 'lightBlue',
-        m: '15px 0',
-      }}>
+      <Typography
+        variant="h1"
+        component="h2"
+        sx={{
+          textAlign: 'center',
+          fontFamily: 'Festive',
+          color: 'lightBlue',
+          m: '15px 0',
+        }}
+      >
         Reduxagram
       </Typography>
       <PostGrid />

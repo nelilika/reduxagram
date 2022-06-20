@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import App from './App';
-import InputFile from './InputFile';
+import NavTabs from './components/UI/NavBar';
+import RoutesList from './routes/RoutesList';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <InputFile />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <NavTabs />
+    <RoutesList />
+  </BrowserRouter>,
   document.getElementById('root')
 );
