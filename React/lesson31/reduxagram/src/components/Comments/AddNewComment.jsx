@@ -4,6 +4,8 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Input } from '../UI/Input';
+import { addComment } from '../../actions';
+import { useDispatch, useSelector } from 'react-redux';
 
 const schema = yup.object().shape({
   author: yup.string().required('The author is required'),
@@ -11,6 +13,9 @@ const schema = yup.object().shape({
 });
 
 function AddNewComment({ defaultValues }) {
+  const dispatch = useDispatch();
+  const selectedPost = useSelector((state) => state.posts.selectedPost);
+
   const {
     register,
     handleSubmit,
@@ -23,7 +28,7 @@ function AddNewComment({ defaultValues }) {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
+    dispatch(addComment(data, selectedPost));
   };
 
   useEffect(() => {

@@ -1,45 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import Post from './Post';
 import Modal from '../UI/Modal';
 import Comments from '../Comments/Comments';
 import AddNewComment from '../Comments/AddNewComment';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadPosts, loadComments } from '../../actions';
+import {
+  loadPosts,
+  loadComments,
+  toggleOpenCommentsModal,
+  toggleAddCommentModal,
+} from '../../actions';
 
 import { posts, comments } from '../../data';
 
 function PostGrid() {
   const dispatch = useDispatch();
   const {
-    posts: { posts: fetchedPosts },
-    comments: { comments: fetchedComments },
+    posts: { posts: fetchedPosts, selectedPost },
+    comments: { isCommentsModalOpened, isAddCommentModalOpened },
   } = useSelector((state) => state);
-
-  const [openComments, setOpenComments] = useState(false);
-  const [openAddComment, setOpenAddComment] = useState(false);
-  const [selectedPost, setSelectedPost] = useState(posts[0]);
 
   useEffect(() => {
     dispatch(loadPosts(posts));
     dispatch(loadComments(comments));
   }, [dispatch]);
 
-  const handleClickOpen = (post) => {
-    setOpenComments(true);
-    setSelectedPost(post);
-  };
-
   const handleCloseComments = () => {
-    setOpenComments(false);
+    dispatch(toggleOpenCommentsModal());
   };
 
-  const handleCloseAddComment = () => {
-    setOpenAddComment(false);
-  };
-
-  const addNewComment = () => {
-    setOpenAddComment(true);
+  const handleAddCommentModal = () => {
+    dispatch(toggleAddCommentModal());
   };
 
   return (
@@ -47,25 +39,20 @@ function PostGrid() {
       <Grid container spacing={2}>
         {fetchedPosts.map((post) => (
           <Grid key={post.id} item xs={6} sm={4} md={3}>
-            <Post
-              post={post}
-              comments={fetchedComments}
-              openModal={handleClickOpen}
-              addNewComment={addNewComment}
-            />
+            <Post post={post} />
           </Grid>
         ))}
       </Grid>
       <Modal
-        open={openComments}
+        open={isCommentsModalOpened}
         handleClose={handleCloseComments}
         title={`${selectedPost.username}'s comments`}
       >
-        <Comments comments={fetchedComments} selectedPost={selectedPost} />
+        <Comments />
       </Modal>
       <Modal
-        open={openAddComment}
-        handleClose={handleCloseAddComment}
+        open={isAddCommentModalOpened}
+        handleClose={handleAddCommentModal}
         title={`Add new comment for ${selectedPost.username}`}
       >
         <AddNewComment defaultValues={{ author: '', comment: '' }} />

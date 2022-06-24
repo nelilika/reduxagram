@@ -12,8 +12,34 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ModeCommentIcon from '@mui/icons-material/ModeComment';
 import AddIcon from '@mui/icons-material/Add';
 import { faker } from '@faker-js/faker';
+import {
+  selectPostId,
+  likePost,
+  toggleAddCommentModal,
+  toggleOpenCommentsModal,
+} from '../../actions';
+import { useDispatch, useSelector } from 'react-redux';
 
-export default function Post({ post, comments, openModal, addNewComment }) {
+export default function Post({ post }) {
+  const dispatch = useDispatch();
+  const {
+    comments: { comments },
+  } = useSelector((state) => state);
+
+  const handleClick = function () {
+    dispatch(toggleAddCommentModal());
+    dispatch(selectPostId(post.code));
+  };
+
+  const openComments = function () {
+    dispatch(toggleOpenCommentsModal());
+    dispatch(selectPostId(post.code));
+  };
+
+  const onLikePost = function () {
+    dispatch(likePost(post.code));
+  };
+
   return (
     <Card
       sx={{
@@ -49,20 +75,17 @@ export default function Post({ post, comments, openModal, addNewComment }) {
         sx={{ display: 'flex', justifyContent: 'space-between' }}
       >
         <div>
-          <IconButton aria-label="add to favorites">
+          <IconButton aria-label="add to favorites" onClick={onLikePost}>
             <FavoriteIcon />
           </IconButton>
           <span>{post.likes}</span>
-          <IconButton aria-label="comments" onClick={() => openModal(post)}>
+          <IconButton aria-label="comments" onClick={() => openComments()}>
             <ModeCommentIcon />
           </IconButton>
           <span>{comments[post.code] ? comments[post.code].length : 0}</span>
         </div>
         <div>
-          <IconButton
-            aria-label="add new comment"
-            onClick={() => addNewComment(post)}
-          >
+          <IconButton aria-label="add new comment" onClick={handleClick}>
             <AddIcon />
           </IconButton>
         </div>
