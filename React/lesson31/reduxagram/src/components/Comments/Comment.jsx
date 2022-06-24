@@ -6,7 +6,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 function Comment({ comment, index }) {
   return (
@@ -16,7 +16,7 @@ function Comment({ comment, index }) {
       </ListItemAvatar>
       <ListItemText
         sx={{
-          ":hover button": {
+          ':hover button': {
             opacity: 1,
           },
         }}
@@ -30,7 +30,11 @@ function Comment({ comment, index }) {
             >
               {comment.user}
             </Typography>
-            <IconButton edge="end" aria-label="comments" sx={{ float: 'right', opacity: 0 }}>
+            <IconButton
+              edge="end"
+              aria-label="comments"
+              sx={{ float: 'right', opacity: 0 }}
+            >
               <CloseIcon />
             </IconButton>
           </>

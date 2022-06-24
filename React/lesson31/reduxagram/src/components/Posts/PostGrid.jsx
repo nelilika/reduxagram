@@ -1,18 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import Post from './Post';
 import Modal from '../UI/Modal';
 import Comments from '../Comments/Comments';
 import AddNewComment from '../Comments/AddNewComment';
+import { useDispatch, useSelector } from 'react-redux';
+import { loadPosts, loadComments } from '../../actions';
 
 import { posts, comments } from '../../data';
 
 function PostGrid() {
-  const [fetchedPosts] = useState(posts);
-  const [fetchedComments] = useState(comments);
+  const dispatch = useDispatch();
+  const {
+    posts: { posts: fetchedPosts },
+    comments: { comments: fetchedComments },
+  } = useSelector((state) => state);
+
   const [openComments, setOpenComments] = useState(false);
   const [openAddComment, setOpenAddComment] = useState(false);
   const [selectedPost, setSelectedPost] = useState(posts[0]);
+
+  useEffect(() => {
+    dispatch(loadPosts(posts));
+    dispatch(loadComments(comments));
+  }, [dispatch]);
 
   const handleClickOpen = (post) => {
     setOpenComments(true);

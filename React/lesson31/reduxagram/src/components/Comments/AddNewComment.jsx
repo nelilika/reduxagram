@@ -11,7 +11,12 @@ const schema = yup.object().shape({
 });
 
 function AddNewComment({ defaultValues }) {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
     mode: 'onBlur',
     resolver: yupResolver(schema),
     defaultValues,
@@ -19,31 +24,35 @@ function AddNewComment({ defaultValues }) {
 
   const onSubmit = (data) => {
     console.log(data);
-  }
+  };
 
   useEffect(() => {
     reset(defaultValues);
-  }, [defaultValues]);
+  }, [defaultValues, reset]);
 
   return (
     <form noValidate sx={{ width: '100%' }} onSubmit={handleSubmit(onSubmit)}>
-      <Input {...register("author")}
-             id="author"
-             type="text"
-             label="Author"
-             name="author"
-             error={!!errors.author}
-             helperText={errors?.author?.message}
+      <Input
+        {...register('author')}
+        id="author"
+        type="text"
+        label="Author"
+        name="author"
+        error={!!errors.author}
+        helperText={errors?.author?.message}
       />
-      <Input {...register("comment")}
-             id="comment"
-             type="text"
-             label="Your comment"
-             name="comment"
-             error={!!errors.comment}
-             helperText={errors?.comment?.message}
+      <Input
+        {...register('comment')}
+        id="comment"
+        type="text"
+        label="Your comment"
+        name="comment"
+        error={!!errors.comment}
+        helperText={errors?.comment?.message}
       />
-      <Button type="submit" fullWidth variant="contained" color="primary">Add new Post</Button>
+      <Button type="submit" fullWidth variant="contained" color="primary">
+        Add new Post
+      </Button>
     </form>
   );
 }

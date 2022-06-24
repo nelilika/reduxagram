@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
-import NavTabs from '../UI/NavBar';
 
 const InputFile = () => {
   const [image, setImage] = useState({

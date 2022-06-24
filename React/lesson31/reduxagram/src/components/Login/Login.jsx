@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Button from '@mui/material/Button';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
@@ -15,7 +15,6 @@ function Login() {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm({
     mode: 'onBlur',
     resolver: yupResolver(schema),
