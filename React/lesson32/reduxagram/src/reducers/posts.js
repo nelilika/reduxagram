@@ -12,6 +12,9 @@ export const initialState = {
   loading: false,
   loaded: false,
   error: null,
+  limit: 5,
+  page: 1,
+  totalCount: 0,
 };
 
 export const postsReducer = function (state = initialState, action) {
@@ -26,8 +29,9 @@ export const postsReducer = function (state = initialState, action) {
         ...state,
         loading: false,
         loaded: true,
-        posts: [...action.payload],
-        selectedPost: action.payload[0].code,
+        posts: [...action.payload.posts],
+        selectedPost: action.payload.posts[0].id,
+        totalCount: action.payload.totalCount,
       };
     case LOAD_POSTS_ERROR:
       return {

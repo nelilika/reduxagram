@@ -6,24 +6,25 @@ import Comments from '../Comments/Comments';
 import AddNewComment from '../Comments/AddNewComment';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  loadPosts,
   loadComments,
   toggleOpenCommentsModal,
   toggleAddCommentModal,
 } from '../../actions';
 import { fetchPosts } from '../../thunk';
+import PostPagination from '../UI/Pagination';
+import { getTotalPages } from '../../utils';
 
 import { comments } from '../../data';
 
 function PostGrid() {
   const dispatch = useDispatch();
   const {
-    posts: { posts: fetchedPosts, selectedPost },
+    posts: { posts: fetchedPosts, selectedPost, limit, page, totalCount },
     comments: { isCommentsModalOpened, isAddCommentModalOpened },
   } = useSelector((state) => state);
 
   useEffect(() => {
-    dispatch(fetchPosts());
+    dispatch(fetchPosts({ limit, page }));
     // dispatch(loadComments(comments));
   }, [dispatch]);
 
@@ -37,6 +38,10 @@ function PostGrid() {
 
   return (
     <>
+      <PostPagination
+        count={getTotalPages(totalCount, limit)}
+        currentPage={page}
+      />
       <Grid container spacing={2}>
         {fetchedPosts.map((post) => (
           <Grid key={post.id} item xs={6} sm={4} md={3}>

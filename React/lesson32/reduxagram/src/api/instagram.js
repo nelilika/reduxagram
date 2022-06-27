@@ -6,8 +6,13 @@ const instagramAxios = axios.create({
   timeout: 1000,
 });
 
-export const getPosts = function () {
-  return instagramAxios.get('/posts');
+export const getPosts = function ({ limit: _limit, page: _page }) {
+  return instagramAxios.get('/posts', {
+    params: {
+      _limit,
+      _page,
+    },
+  });
 };
 
 export const getComments = function (id) {
