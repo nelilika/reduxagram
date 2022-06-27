@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
 import { rootReducer } from '../reducers';
 
 const logger = (store) => (next) => (action) => {
@@ -10,7 +11,7 @@ const logger = (store) => (next) => (action) => {
   return result;
 };
 
-const middlewares = [];
+const middlewares = [thunk];
 
 if (process.env.NODE_ENV === 'development') {
   middlewares.push(logger);

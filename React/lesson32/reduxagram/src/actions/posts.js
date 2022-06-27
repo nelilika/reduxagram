@@ -9,7 +9,7 @@ export const loadPosts = () => ({
 });
 
 export const loadPostsSuccess = (posts) => ({
-  type: LOAD_POSTS,
+  type: LOAD_POSTS_SUCCESS,
   payload: posts,
 });
 

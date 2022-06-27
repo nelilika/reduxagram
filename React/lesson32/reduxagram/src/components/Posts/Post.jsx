@@ -11,7 +11,6 @@ import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ModeCommentIcon from '@mui/icons-material/ModeComment';
 import AddIcon from '@mui/icons-material/Add';
-import { faker } from '@faker-js/faker';
 import {
   selectPostId,
   likePost,
@@ -53,7 +52,7 @@ export default function Post({ post }) {
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            <img src={faker.image.avatar()} alt="avatar"></img>
+            <img src={post.avatar} alt="avatar"></img>
           </Avatar>
         }
         title={post.username}

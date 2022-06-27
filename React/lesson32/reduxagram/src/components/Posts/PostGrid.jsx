@@ -11,8 +11,9 @@ import {
   toggleOpenCommentsModal,
   toggleAddCommentModal,
 } from '../../actions';
+import { fetchPosts } from '../../thunk';
 
-import { posts, comments } from '../../data';
+import { comments } from '../../data';
 
 function PostGrid() {
   const dispatch = useDispatch();
@@ -22,8 +23,8 @@ function PostGrid() {
   } = useSelector((state) => state);
 
   useEffect(() => {
-    dispatch(loadPosts(posts));
-    dispatch(loadComments(comments));
+    dispatch(fetchPosts());
+    // dispatch(loadComments(comments));
   }, [dispatch]);
 
   const handleCloseComments = () => {
@@ -48,7 +49,7 @@ function PostGrid() {
         handleClose={handleCloseComments}
         title={`${selectedPost.username}'s comments`}
       >
-        <Comments />
+        {/* <Comments /> */}
       </Modal>
       <Modal
         open={isAddCommentModalOpened}
