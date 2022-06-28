@@ -9,7 +9,7 @@ export const fetchPosts = (params) => {
       const newPosts = posts.map((post) => ({
         ...post,
         avatar: faker.image.avatar(),
-      }));
+      })) ;
       const totalCount = Number(headers['x-total-count']);
       dispatch(loadPostsSuccess({ posts: newPosts, totalCount }));
     } catch (e) {
