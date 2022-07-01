@@ -1,4 +1,5 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { applyMiddleware, compose } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
 import { rootReducer } from '../reducers';
 
@@ -20,4 +21,8 @@ if (process.env.NODE_ENV === 'development') {
 const middlewareEnhancer = applyMiddleware(...middlewares);
 const composedEnhancers = compose(middlewareEnhancer);
 
-export const store = createStore(rootReducer, undefined, composedEnhancers);
+// export const store = createStore(rootReducer, undefined, composedEnhancers);
+
+export default configureStore({
+  reducer: rootReducer,
+});

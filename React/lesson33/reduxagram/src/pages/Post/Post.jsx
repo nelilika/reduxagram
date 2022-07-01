@@ -14,6 +14,8 @@ import { useSelector } from 'react-redux';
 import './Post.scss';
 import Button from '@mui/material/Button';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import { fetchCommentsById } from '../../store/commentsStore';
+import Comments from '../../components/Comments/Comments';
 
 function Post() {
   const navigate = useNavigate();
@@ -22,9 +24,9 @@ function Post() {
   const selectedPost = useSelector((state) => state.posts.selectedPost);
 
   useEffect(() => {
-    // dispatch(fetchComments(id));
     if (!Object.keys(selectedPost).length) {
       dispatch(fetchPost(id));
+      dispatch(fetchCommentsById(id));
     }
   }, [dispatch, id, selectedPost]);
 
@@ -65,7 +67,7 @@ function Post() {
             />
             <div className="post-comments">
               <div className="comments">
-                {/* <Comments selectedPost={selectedPost} /> */}
+                <Comments selectedPost={selectedPost} />
               </div>
               <div>
                 <AddNewComment selectedPost={selectedPost} />

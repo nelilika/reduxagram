@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import './index.css';
 import NavTabs from './components/UI/NavBar';
 import RoutesList from './routes/RoutesList';
-import { store } from './store';
+import store from './store';
 
 ReactDOM.render(
   <Provider store={store}>

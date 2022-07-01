@@ -10,8 +10,9 @@ import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { selectPost, likePost } from '../../actions';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { fetchCommentsById } from '../../store/commentsStore';
 
 export default function Post({ post }) {
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ export default function Post({ post }) {
 
   const handlePostDetailsClick = function () {
     dispatch(selectPost(post));
+    dispatch(fetchCommentsById(post.id));
     navigate(`/posts/${post.id}`);
   };
 

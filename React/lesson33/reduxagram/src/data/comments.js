@@ -293,3 +293,257 @@ export const comments = {
     },
   ],
 };
+
+export const commentsArr = [
+  {
+    text: 'Totally need to try this.',
+    user: 'heavymetaladam',
+    postId: 'BAhvZrRwcfu',
+  },
+  {
+    text: 'Wes. WE should have lunch.',
+    user: 'jdaveknox',
+    postId: 'BAcyDyQwcXX',
+  },
+  { text: '#adults', user: 'jdaveknox', postId: 'BAcyDyQwcXX' },
+  { text: '@jdaveknox yes!', user: 'wesbos', postId: 'BAcyDyQwcXX' },
+  {
+    text: '😍 love Hamilton!',
+    user: 'willowtreemegs',
+    postId: 'BAcyDyQwcXX',
+  },
+  {
+    text: "Those are cute! They're like silver dollar pancakes.",
+    user: 'rrsimonsen',
+    postId: 'BAPIPRjQce9',
+  },
+  {
+    text: "I like baby pancakes but gluten free please!! I'll bring the coffee!! See you in 6 days!!!!!! 😝😛😝♥️",
+    user: 'terzisn',
+    postId: 'BAPIPRjQce9',
+  },
+  {
+    text: '... and apparently growing baby. 👀. Yum.',
+    user: 'henrihelvetica',
+    postId: 'BAPIPRjQce9',
+  },
+  {
+    text: '@wesbos 👍 my daughter is a pancake eating machine!',
+    user: 'brentoage',
+    postId: 'BAPIPRjQce9',
+  },
+  { text: 'Nice stove!', user: 'haaps', postId: 'BAPIPRjQce9' },
+  {
+    text: 'Genius bottle use! Do you make a single batch of batter or make a lot and freeze it?',
+    user: 'gobananna',
+    postId: 'BAPIPRjQce9',
+  },
+  {
+    text: '@gobananna I just made a batch and put in in a FIFO bottle. Keeps in the fridge for a few days.',
+    user: 'wesbos',
+    postId: 'BAPIPRjQce9',
+  },
+  {
+    text: "@haaps thanks! It's a Jenn air - so nice to cool with!",
+    user: 'wesbos',
+    postId: 'BAPIPRjQce9',
+  },
+  {
+    text: 'Where would you go and for how long, if you had location freedom? - Greg 🌎',
+    user: 'world_greg',
+    postId: 'BAPIPRjQce9',
+  },
+  {
+    text: "Looking great Wes! I'd like to see the other side of the room too.",
+    user: 'axcdnt',
+    postId: 'BAF_KY4wcRY',
+  },
+  {
+    text: "I've never caught your podcast. Have one right? Btw - they don't have a Canary pillow? 😝",
+    user: 'henrihelvetica',
+    postId: 'BAF_KY4wcRY',
+  },
+  {
+    text: 'Great way to start the year.',
+    user: 'pmgllc',
+    postId: 'BAF_KY4wcRY',
+  },
+  {
+    text: 'Are there 4k monitors?',
+    user: 'alexbaumgertner',
+    postId: 'BAF_KY4wcRY',
+  },
+  {
+    text: "@axcdnt that is where I put all the junk. I'll have to clean that side too @henrihelvetica no podcast yet! @pmgllc ohh yeah! @alexbaumgertner yep - the main one is 4K - I'm loving it",
+    user: 'wesbos',
+    postId: 'BAF_KY4wcRY',
+  },
+  {
+    text: 'That chrome pillow. 😉',
+    user: 'imagesofthisandthat',
+    postId: 'BAF_KY4wcRY',
+  },
+  {
+    text: '@wesbos is that the Dell 4k? The MacBook Pro powers it well? I also have a Retina™ / x1 setup as well. Very handy.',
+    user: 'henrihelvetica',
+    postId: 'BAF_KY4wcRY',
+  },
+  { text: '#minimalsetups', user: 'wesbos', postId: 'BAF_KY4wcRY' },
+  {
+    text: 'that is the sound of success!',
+    user: 'mdxprograms',
+    postId: '_4jHytwcUA',
+  },
+  {
+    text: 'Did she get to eat her letter?',
+    user: 'pathiebert',
+    postId: '_zbaOlQcbn',
+  },
+  {
+    text: 'Nope @pathiebert! She has too much teeth now (8) so that would definitely be her first cavity 😉',
+    user: 'kaitbos',
+    postId: '_zbaOlQcbn',
+  },
+  { text: 'A+', user: 'mrjoedee', postId: '_rmvQfQce8' },
+  {
+    text: 'I recently went to a ramen place in Philly. So amazing!',
+    user: 'jrtashjian',
+    postId: '_rmvQfQce8',
+  },
+  {
+    text: 'All bundled up!  Where ya goin?',
+    user: 'sophie_and_sadie',
+    postId: '_ep9kiQcVy',
+  },
+  {
+    text: "Super congrats! That's wicked cool and looks great.",
+    user: 'pmgllc',
+    postId: '_XpJcrwcSn',
+  },
+  {
+    text: 'real live paper magazine? woah haha. flex box is awesome though, could rage quit without it',
+    user: 'tjholowaychuk2',
+    postId: '_XpJcrwcSn',
+  },
+  {
+    text: '@tjholowaychuk2 haha yes! Old school stylez!',
+    user: 'wesbos',
+    postId: '_XpJcrwcSn',
+  },
+  { text: '👌', user: 't_volpe', postId: '_HMejJQcY5' },
+  {
+    text: 'Nice shot, mister!',
+    user: 'imagesofthisandthat',
+    postId: '_HMejJQcY5',
+  },
+  { text: '😍', user: 'melsariffodeen', postId: '_Fq2zmwcaz' },
+  { text: 'Very cool!', user: 'ka11away', postId: '_Fq2zmwcaz' },
+  { text: 'Uhu!', user: 'lucascaixeta', postId: '_A2r0aQcfD' },
+  {
+    text: "What's your lighting source?",
+    user: 'seth_mcleod',
+    postId: '1rhFawccs',
+  },
+  {
+    text: 'And what are you using for XLR mix adapter? I found a big price jump between $55 range and $170 range.',
+    user: 'pmgllc',
+    postId: '1rhFawccs',
+  },
+  {
+    text: 'I still need a desk boom for mine mic. Nice upgrades',
+    user: 'stolinski',
+    postId: '1rhFawccs',
+  },
+  {
+    text: "Love the coat! Where's it from? Lol",
+    user: '_lindersss',
+    postId: 'oTZ0zQcWt',
+  },
+  {
+    text: 'What do we gotta do to get some :)? @wesbos',
+    user: 'jonasbad',
+    postId: 'hZh6IQcfN',
+  },
+  {
+    text: 'Might drop by today - real quick. Trade you an illegal pin for these? Lol. @wesbos',
+    user: 'henrihelvetica',
+    postId: 'hZh6IQcfN',
+  },
+  {
+    text: "I'm with @jonasbad on this. What we gotta do? :D",
+    user: 'datamoshr',
+    postId: 'hZh6IQcfN',
+  },
+  {
+    text: "@jonasbad @datamoshr I'll post them up on my blog soon!",
+    user: 'wesbos',
+    postId: 'hZh6IQcfN',
+  },
+  { text: 'Want', user: 'kamuelafranco', postId: 'hZh6IQcfN' },
+  { text: 'want!', user: 'josemanuelxyz', postId: 'hZh6IQcfN' },
+  { text: '#Top', user: 'gabrielvieira.me', postId: 'hZh6IQcfN' },
+  {
+    text: "Where's lux at? 💤?",
+    user: 'henrihelvetica',
+    postId: 'fasqlQceO',
+  },
+  {
+    text: 'Love this house during the holidays! And all other times of the year...',
+    user: 'danielleplas',
+    postId: 'fasqlQceO',
+  },
+  { text: '@dogsandbrew', user: 'likea_bos', postId: 'VBgtGQcSf' },
+  { text: 'Next on my list!', user: 'tomwalsham', postId: 'VBgtGQcSf' },
+  {
+    text: 'Is that from collective arts ?',
+    user: 'trevorb_91',
+    postId: 'VBgtGQcSf',
+  },
+  {
+    text: '@kaitbos  that vest!!! 😍',
+    user: 'courtneyeveline',
+    postId: 'FpTyHQcau',
+  },
+  {
+    text: 'I just love her! @kaitbos',
+    user: 'kalibrix',
+    postId: 'FpTyHQcau',
+  },
+  {
+    text: "@courtneyeveline I know! My friend gave it to her and I wanted a matching one but only Lux can pull it off. She's so fancy 😉",
+    user: 'kaitbos',
+    postId: 'FpTyHQcau',
+  },
+  {
+    text: 'Char has that vest!!! Super cute!',
+    user: 'jennlensink',
+    postId: 'FpTyHQcau',
+  },
+  {
+    text: "You'll have to meet her soon @kalibrix!!",
+    user: 'kaitbos',
+    postId: 'FpTyHQcau',
+  },
+  {
+    text: 'Haha @kaitbos so true, babies these days are sooo stylish. 😎',
+    user: 'courtneyeveline',
+    postId: 'FpTyHQcau',
+  },
+  { text: 'JavaScript 😄😆🙋', user: 'lucascaixeta', postId: 'FpTyHQcau' },
+  {
+    text: 'That hoodie is amazing! Where did you get it?',
+    user: 'br11x',
+    postId: 'FpTyHQcau',
+  },
+  {
+    text: "@br11x I did a teespring a few months ago - maybe I'll do another one soon",
+    user: 'wesbos',
+    postId: 'FpTyHQcau',
+  },
+  {
+    text: "If you get in the mood for authentic Italian pizza, check out @backspaceaustin - it's👌🏻",
+    user: 'dessie.ann',
+    postId: 'B3eiIwcYV',
+  },
+  { text: '😱 jealous', user: 'jenngbrewer', postId: 'B3eiIwcYV' },
+];

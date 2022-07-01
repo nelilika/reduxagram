@@ -9,12 +9,13 @@ function Comments() {
     posts: { selectedPost },
     comments: { comments },
   } = useSelector((state) => state);
+  console.log(comments);
   return (
     <List sx={{ width: '100%', maxWidth: 400, bgcolor: 'background.paper' }}>
-      {comments[selectedPost].map((comment, i) => (
+      {comments.map((comment, i) => (
         <div key={i}>
           <Comment comment={comment} index={i} />
-          {comments[selectedPost].length !== i + 1 && (
+          {comments.length !== i + 1 && (
             <Divider variant="inset" component="li" />
           )}
         </div>
