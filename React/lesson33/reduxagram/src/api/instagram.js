@@ -15,6 +15,10 @@ export const getPosts = function ({ limit: _limit, page: _page }) {
   });
 };
 
+export const getPost = function (id) {
+  return instagramAxios.get(`/posts/${id}`);
+};
+
 export const getComments = function (id) {
   return instagramAxios.get(`/posts/${id}/comments`);
 };

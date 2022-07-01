@@ -9,7 +9,7 @@ import { red } from '@mui/material/colors';
 import AddNewComment from '../../components/Comments/AddNewComment';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-// import { fetchComments, fetchPost } from '../../thunk';
+import { fetchPost } from '../../thunk';
 import { useSelector } from 'react-redux';
 import './Post.scss';
 import Button from '@mui/material/Button';
@@ -23,8 +23,10 @@ function Post() {
 
   useEffect(() => {
     // dispatch(fetchComments(id));
-    // dispatch(fetchPost(id));
-  }, [dispatch, id]);
+    if (!Object.keys(selectedPost).length) {
+      dispatch(fetchPost(id));
+    }
+  }, [dispatch, id, selectedPost]);
 
   const handleBackLick = () => {
     navigate(-1);

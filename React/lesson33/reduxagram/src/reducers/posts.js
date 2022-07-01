@@ -4,6 +4,7 @@ import {
   LOAD_POSTS_ERROR,
   SELECT_POST,
   LIKE_POST,
+  LOAD_POST_SUCCESS,
 } from '../actions';
 
 export const initialState = {
@@ -54,6 +55,11 @@ export const postsReducer = function (state = initialState, action) {
           }
           return post;
         }),
+      };
+    case LOAD_POST_SUCCESS:
+      return {
+        ...state,
+        selectedPost: { ...action.payload },
       };
     default:
       return state;
