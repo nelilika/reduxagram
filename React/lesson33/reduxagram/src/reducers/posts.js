@@ -13,7 +13,7 @@ export const initialState = {
   loaded: false,
   error: null,
   limit: 5,
-  page: 1,
+  page: 2,
   totalCount: 0,
 };
 

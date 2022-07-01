@@ -1,18 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import PostGrid from '../components/Posts/PostGrid';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPosts } from '../thunk';
 import Typography from '@mui/material/Typography';
+import PostPagination from '../components/UI/Pagination';
+import { getTotalPages } from '../utils';
 
 export default function Posts() {
   const dispatch = useDispatch();
-  const { data: posts } = useSelector((state) => state.posts);
+  const {
+    posts: { posts, limit, page: initPage, totalCount },
+  } = useSelector((state) => state);
+  const [page, setPage] = useState(initPage);
+
+  const pages = useMemo(
+    () => getTotalPages(totalCount, limit),
+    [totalCount, limit]
+  );
 
   useEffect(() => {
-    if (!posts.length) {
-      dispatch(fetchPosts());
-    }
-  }, [dispatch, posts.length]);
+    dispatch(fetchPosts({ limit, page }));
+  }, [dispatch, posts.length, limit, page]);
+
+  const changePage = (event, value) => {
+    setPage(value);
+  };
 
   return (
     <>
@@ -28,7 +40,10 @@ export default function Posts() {
       >
         Reduxagram
       </Typography>
-      <PostGrid />
+      {posts.length && (
+        <PostPagination page={page} changePage={changePage} count={pages} />
+      )}
+      <PostGrid posts={posts} />
     </>
   );
 }

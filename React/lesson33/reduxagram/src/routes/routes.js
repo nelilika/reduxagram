@@ -1,12 +1,13 @@
 import { lazy, Suspense } from 'react';
 import { Navigate } from 'react-router-dom';
-import NotFound from '../components/Examples/NotFound.jsx';
 
-const AppAsync = lazy(() => import('../App.js'));
-const LoginAsync = lazy(() => import('../components/Login/Login'));
-const InputFileAsync = lazy(() => import('../components/Examples/InputFile'));
+const PostsAsync = lazy(() => import('../pages/Posts'));
+const PostAsync = lazy(() => import('../pages/Post/Post'));
+const LoginAsync = lazy(() => import('../pages/Login/Login'));
+const InputFileAsync = lazy(() => import('../pages/Examples/InputFile'));
+const NotFoundAsync = lazy(() => import('../pages/Examples/NotFound'));
 
-function getComponent(Component, isPrivate) {
+function getComponent(Component, isPrivate = true) {
   return isPrivate ? (
     <Suspense fallback={<>...</>}>
       <Component />
@@ -19,24 +20,19 @@ function getComponent(Component, isPrivate) {
 export const routes = [
   {
     path: '/posts',
-    element: getComponent(AppAsync, localStorage.getItem('AUTH_TOKEN')),
+    element: getComponent(PostsAsync),
   },
   {
     path: '/posts/:id',
-    element: getComponent(<h3>Post id</h3>),
+    element: getComponent(PostAsync),
   },
   {
     path: 'login',
     element: getComponent(LoginAsync),
   },
   {
-    path: 'example/input',
-    element: getComponent(InputFileAsync, localStorage.getItem('AUTH_TOKEN')),
+    path: 'example',
+    element: getComponent(InputFileAsync),
   },
-  {
-    path: 'example/notfound',
-    element: getComponent(NotFound),
-    isPrivate: true,
-  },
-  { path: '*', element: <NotFound /> },
+  { path: '*', element: getComponent(NotFoundAsync) },
 ];
