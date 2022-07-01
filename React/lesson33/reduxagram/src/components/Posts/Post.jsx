@@ -9,17 +9,17 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { selectPost, likePost } from '../../actions';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { fetchCommentsById } from '../../store/commentsStore';
+import { likePost, selectPost } from '../../store/postsStore';
 
 export default function Post({ post }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const onLikePost = function () {
-    dispatch(likePost(post.code));
+    dispatch(likePost(post.id));
   };
 
   const handlePostDetailsClick = function () {

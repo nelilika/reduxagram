@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import PostGrid from '../components/Posts/PostGrid';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchPosts } from '../thunk';
+import { fetchPosts } from '../store/postsStore';
 import Typography from '@mui/material/Typography';
 import PostPagination from '../components/UI/Pagination';
 import { getTotalPages } from '../utils';
