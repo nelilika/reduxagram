@@ -6,26 +6,37 @@ import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
-import Comments from '../../components/Comments/Comments';
 import AddNewComment from '../../components/Comments/AddNewComment';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { fetchComments, fetchPost } from '../../thunk';
+// import { fetchComments, fetchPost } from '../../thunk';
 import { useSelector } from 'react-redux';
 import './Post.scss';
+import Button from '@mui/material/Button';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 function Post() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const dispatch = useDispatch();
   const selectedPost = useSelector((state) => state.posts.selectedPost);
 
   useEffect(() => {
-    dispatch(fetchComments(id));
-    dispatch(fetchPost(id));
+    // dispatch(fetchComments(id));
+    // dispatch(fetchPost(id));
   }, [dispatch, id]);
+
+  const handleBackLick = () => {
+    navigate(-1);
+  };
 
   return (
     <>
+      <Button
+        onClick={handleBackLick}
+        variant="outlined"
+        startIcon={<ArrowBackIosNewIcon />}
+      ></Button>
       <div className="post-wrapper">
         <Card
           sx={{
@@ -52,7 +63,7 @@ function Post() {
             />
             <div className="post-comments">
               <div className="comments">
-                <Comments selectedPost={selectedPost} />
+                {/* <Comments selectedPost={selectedPost} /> */}
               </div>
               <div>
                 <AddNewComment selectedPost={selectedPost} />

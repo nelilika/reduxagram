@@ -1,7 +1,7 @@
 export const LOAD_POSTS = '[Post] Load Posts';
 export const LOAD_POSTS_SUCCESS = '[Post] Load Posts Success';
 export const LOAD_POSTS_ERROR = '[Post] Load Posts Error';
-export const SELECT_POST_ID = '[Post] Select Post Id';
+export const SELECT_POST = '[Post] Select Post';
 export const LIKE_POST = '[Post] Like Post';
 export const CHANGE_PAGE = '[Post] Change Post Page';
 
@@ -19,9 +19,9 @@ export const loadPostsError = (error) => ({
   payload: error,
 });
 
-export const selectPostId = (postId) => ({
-  type: SELECT_POST_ID,
-  payload: postId,
+export const selectPost = (post) => ({
+  type: SELECT_POST,
+  payload: post,
 });
 
 export const likePost = (postId) => ({

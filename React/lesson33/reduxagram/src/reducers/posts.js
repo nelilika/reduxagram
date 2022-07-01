@@ -2,7 +2,7 @@ import {
   LOAD_POSTS,
   LOAD_POSTS_SUCCESS,
   LOAD_POSTS_ERROR,
-  SELECT_POST_ID,
+  SELECT_POST,
   LIKE_POST,
 } from '../actions';
 
@@ -30,7 +30,7 @@ export const postsReducer = function (state = initialState, action) {
         loading: false,
         loaded: true,
         posts: [...action.payload.posts],
-        selectedPost: action.payload.posts[0].id,
+        selectedPost: action.payload.posts[0],
         totalCount: action.payload.totalCount,
       };
     case LOAD_POSTS_ERROR:
@@ -40,7 +40,7 @@ export const postsReducer = function (state = initialState, action) {
         loaded: true,
         error: state.payload,
       };
-    case SELECT_POST_ID:
+    case SELECT_POST:
       return {
         ...state,
         selectedPost: action.payload,

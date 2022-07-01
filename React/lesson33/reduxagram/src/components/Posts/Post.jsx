@@ -9,34 +9,21 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ModeCommentIcon from '@mui/icons-material/ModeComment';
-import AddIcon from '@mui/icons-material/Add';
-import {
-  selectPostId,
-  likePost,
-  toggleAddCommentModal,
-  toggleOpenCommentsModal,
-} from '../../actions';
+import { selectPost, likePost } from '../../actions';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 export default function Post({ post }) {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const {
-    comments: { comments },
-  } = useSelector((state) => state);
-
-  const handleClick = function () {
-    dispatch(toggleAddCommentModal());
-    dispatch(selectPostId(post.code));
-  };
-
-  const openComments = function () {
-    dispatch(toggleOpenCommentsModal());
-    dispatch(selectPostId(post.code));
-  };
 
   const onLikePost = function () {
     dispatch(likePost(post.code));
+  };
+
+  const handlePostDetailsClick = function () {
+    dispatch(selectPost(post));
+    navigate(`/posts/${post.id}`);
   };
 
   return (
@@ -63,6 +50,7 @@ export default function Post({ post }) {
         height="194"
         image={post.display_src}
         alt="Paella dish"
+        onClick={handlePostDetailsClick}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
@@ -78,15 +66,6 @@ export default function Post({ post }) {
             <FavoriteIcon />
           </IconButton>
           <span>{post.likes}</span>
-          <IconButton aria-label="comments" onClick={() => openComments()}>
-            <ModeCommentIcon />
-          </IconButton>
-          <span>{comments[post.code] ? comments[post.code].length : 0}</span>
-        </div>
-        <div>
-          <IconButton aria-label="add new comment" onClick={handleClick}>
-            <AddIcon />
-          </IconButton>
         </div>
       </CardActions>
     </Card>

@@ -30,20 +30,6 @@ function PostGrid({ posts }) {
           </Grid>
         ))}
       </Grid>
-      <Modal
-        open={isCommentsModalOpened}
-        handleClose={handleCloseComments}
-        title={`${selectedPost.username}'s comments`}
-      >
-        {/* <Comments /> */}
-      </Modal>
-      <Modal
-        open={isAddCommentModalOpened}
-        handleClose={handleAddCommentModal}
-        title={`Add new comment for ${selectedPost.username}`}
-      >
-        <AddNewComment defaultValues={{ author: '', comment: '' }} />
-      </Modal>
     </>
   );
 }
