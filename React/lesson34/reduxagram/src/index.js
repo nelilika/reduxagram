@@ -6,6 +6,8 @@ import './index.css';
 import NavTabs from './components/UI/NavBar';
 import RoutesList from './routes/RoutesList';
 import { store } from './store';
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer } from 'react-notifications';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -13,6 +15,7 @@ ReactDOM.render(
       <NavTabs />
       <RoutesList />
     </BrowserRouter>
+    <NotificationContainer />
   </Provider>,
   document.getElementById('root')
 );

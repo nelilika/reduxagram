@@ -1,14 +1,6 @@
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
-
-// const logger = (store) => (next) => (action) => {
-//   console.group(action.type);
-//   console.info('dispatching', action);
-//   let result = next(action);
-//   console.log('next state', store.getState());
-//   console.groupEnd();
-//   return result;
-// };
+import { instagramApi } from '../api/instagramRTK';
 
 const logger = createLogger({
   collapsed: true,
@@ -20,7 +12,7 @@ const logger = createLogger({
   },
 });
 
-const middlewares = [thunk];
+const middlewares = [thunk, instagramApi.middleware];
 
 if (process.env.NODE_ENV === 'development') {
   middlewares.push(logger);

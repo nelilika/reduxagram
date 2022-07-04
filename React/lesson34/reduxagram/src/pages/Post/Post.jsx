@@ -14,21 +14,20 @@ import './Post.scss';
 import Button from '@mui/material/Button';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { fetchCommentsById } from '../../store/reducers/commentsStore';
-import { fetchPost } from '../../store/reducers/postsStore';
 import Comments from '../../components/Comments/Comments';
+import { useGetPostQuery } from '../../api/instagramRTK';
 
 function Post() {
   const navigate = useNavigate();
   const { id } = useParams();
   const dispatch = useDispatch();
   const {
-    posts: { selectedPost },
     comments: { comments },
   } = useSelector((state) => state);
+  const { data: selectedPost, error, isLoading } = useGetPostQuery(id);
 
   useEffect(() => {
-    if (!Object.keys(selectedPost).length) {
-      dispatch(fetchPost(id));
+    if (selectedPost) {
       dispatch(fetchCommentsById(id));
     }
   }, [dispatch, id, selectedPost]);
@@ -36,6 +35,14 @@ function Post() {
   const handleBackLick = () => {
     navigate(-1);
   };
+
+  if (error) {
+    return <h1>Error</h1>;
+  }
+
+  if (isLoading) {
+    return <h1>Loading ... </h1>;
+  }
 
   return (
     <>

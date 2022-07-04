@@ -5,11 +5,12 @@ import { fetchPosts } from '../store/reducers/postsStore';
 import Typography from '@mui/material/Typography';
 import PostPagination from '../components/UI/Pagination';
 import { getTotalPages } from '../utils';
+import { useGetPostsQuery } from '../api/instagramRTK';
+import { NotificationManager } from 'react-notifications';
 
 export default function Posts() {
-  const dispatch = useDispatch();
   const {
-    posts: { posts, limit, page: initPage, totalCount },
+    posts: { limit, page: initPage, totalCount },
   } = useSelector((state) => state);
   const [page, setPage] = useState(initPage);
 
@@ -17,14 +18,22 @@ export default function Posts() {
     () => getTotalPages(totalCount, limit),
     [totalCount, limit]
   );
-
-  useEffect(() => {
-    dispatch(fetchPosts({ limit, page }));
-  }, [dispatch, posts.length, limit, page]);
+  const { data: posts, error, isLoading } = useGetPostsQuery({ limit, page });
 
   const changePage = (event, value) => {
     setPage(value);
   };
+
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    NotificationManager.error('Error message', 'Click me!', 5000, () => {
+      alert('callback');
+    });
+    return <h1> Error</h1>;
+  }
 
   return (
     <>
