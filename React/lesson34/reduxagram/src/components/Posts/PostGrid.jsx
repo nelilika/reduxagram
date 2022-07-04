@@ -1,26 +1,8 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Post from './Post';
-import Modal from '../UI/Modal';
-import AddNewComment from '../Comments/AddNewComment';
-import { useDispatch, useSelector } from 'react-redux';
-import { toggleOpenCommentsModal, toggleAddCommentModal } from '../../actions';
 
 function PostGrid({ posts }) {
-  const dispatch = useDispatch();
-  const {
-    posts: { selectedPost },
-    comments: { isCommentsModalOpened, isAddCommentModalOpened },
-  } = useSelector((state) => state);
-
-  const handleCloseComments = () => {
-    dispatch(toggleOpenCommentsModal());
-  };
-
-  const handleAddCommentModal = () => {
-    dispatch(toggleAddCommentModal());
-  };
-
   return (
     <>
       <Grid container spacing={2}>

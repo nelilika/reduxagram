@@ -17,7 +17,11 @@ export const commentsSlice = createSlice({
     loaded: false,
     errors: {},
   },
-  reducers: {},
+  reducers: {
+    addComment: (state, action) => {
+      state.comments.push(action.payload);
+    },
+  },
   extraReducers: {
     [fetchCommentsById.pending]: (state) => {
       state.loading = true;
@@ -36,6 +40,6 @@ export const commentsSlice = createSlice({
   },
 });
 
-// export const { } = commentsSlice.actions;
+export const { addComment } = commentsSlice.actions;
 
 export default commentsSlice.reducer;

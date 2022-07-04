@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Input } from '../UI/Input';
-import { addComment } from '../../actions';
+import { addComment } from '../../store/commentsStore';
 import { useDispatch, useSelector } from 'react-redux';
 
 const schema = yup.object().shape({
@@ -27,8 +27,13 @@ function AddNewComment({ defaultValues }) {
     defaultValues,
   });
 
-  const onSubmit = (data) => {
-    dispatch(addComment(data, selectedPost));
+  const onSubmit = ({ author, comment }) => {
+    const newComment = {
+      postId: selectedPost.id,
+      text: comment,
+      user: author,
+    };
+    dispatch(addComment(newComment));
   };
 
   useEffect(() => {
