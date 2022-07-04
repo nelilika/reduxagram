@@ -9,7 +9,7 @@ function Comments() {
     posts: { selectedPost },
     comments: { comments },
   } = useSelector((state) => state);
-  console.log(comments);
+
   return (
     <List sx={{ width: '100%', maxWidth: 400, bgcolor: 'background.paper' }}>
       {comments.map((comment, i) => (

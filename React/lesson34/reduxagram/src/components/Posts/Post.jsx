@@ -11,8 +11,8 @@ import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { fetchCommentsById } from '../../store/commentsStore';
-import { likePost, selectPost } from '../../store/postsStore';
+import { fetchCommentsById } from '../../store/reducers/commentsStore';
+import { likePost, selectPost } from '../../store/reducers/postsStore';
 
 export default function Post({ post }) {
   const navigate = useNavigate();

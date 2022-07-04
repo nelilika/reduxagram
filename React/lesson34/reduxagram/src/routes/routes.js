@@ -4,11 +4,19 @@ import { Navigate } from 'react-router-dom';
 const PostsAsync = lazy(() => import('../pages/Posts'));
 const PostAsync = lazy(() => import('../pages/Post/Post'));
 const LoginAsync = lazy(() => import('../pages/Login/Login'));
-const InputFileAsync = lazy(() => import('../pages/Examples/InputFile'));
-const NotFoundAsync = lazy(() => import('../pages/Examples/NotFound'));
+const InputFileAsync = lazy(() => import('../components/Examples/InputFile'));
+const NotFoundAsync = lazy(() => import('../components/Examples/NotFound'));
 
-function getComponent(Component, isPrivate = true) {
-  return isPrivate ? (
+function getComponent(Component, isPrivate) {
+  if (!isPrivate) {
+    return (
+      <Suspense fallback={<>...</>}>
+        <Component />
+      </Suspense>
+    );
+  }
+
+  return localStorage.getItem('AUTH_TOKEN') ? (
     <Suspense fallback={<>...</>}>
       <Component />
     </Suspense>
@@ -20,11 +28,11 @@ function getComponent(Component, isPrivate = true) {
 export const routes = [
   {
     path: '/posts',
-    element: getComponent(PostsAsync),
+    element: getComponent(PostsAsync, true),
   },
   {
     path: '/posts/:id',
-    element: getComponent(PostAsync),
+    element: getComponent(PostAsync, true),
   },
   {
     path: 'login',

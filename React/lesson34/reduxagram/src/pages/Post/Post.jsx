@@ -13,8 +13,8 @@ import { useSelector } from 'react-redux';
 import './Post.scss';
 import Button from '@mui/material/Button';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { fetchCommentsById } from '../../store/commentsStore';
-import { fetchPost } from '../../store/postsStore';
+import { fetchCommentsById } from '../../store/reducers/commentsStore';
+import { fetchPost } from '../../store/reducers/postsStore';
 import Comments from '../../components/Comments/Comments';
 
 function Post() {

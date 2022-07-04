@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Input } from '../UI/Input';
-import { addComment } from '../../store/commentsStore';
+import { addComment } from '../../store/reducers/commentsStore';
 import { useDispatch, useSelector } from 'react-redux';
 
 const schema = yup.object().shape({

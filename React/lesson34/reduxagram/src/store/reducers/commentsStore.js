@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { getComments } from '../api';
+import { getComments } from '../../api';
 
 export const fetchCommentsById = createAsyncThunk(
   'comments/fetchCommentsById',
